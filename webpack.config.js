@@ -1,5 +1,6 @@
 var path = require('path');
 
+
 module.exports = {
   context: __dirname,
   entry: './client/entry.js',
@@ -15,7 +16,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           query: {
-            presets: ['@babel/env', '@babel/react']
+            presets: ['@babel/env', '@babel/react', 'es2015']
           }
         },
       }

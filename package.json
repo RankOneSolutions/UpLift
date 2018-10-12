@@ -10,7 +10,8 @@
   "scripts": {
     "start": "nodemon ./server/server.js --exec babel-node ./server/server.js --presets es2015,stage-2",
     "dev": "nodemon ./server/server.js",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "postinstall": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",

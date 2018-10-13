@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       hits: [],
     };
@@ -15,14 +16,19 @@ class App extends Component {
   }
 
   render() {
-    const {cute_animals} = this.state;
+    const {results} = this.state;
 
     return (
       <div>
        <h1>I'm in Redux and React Router! Tight.</h1>
        <h3>Check out some data:</h3>
-       {cute_animals}
-       {console.log(cute_animals)}
+       <ul>
+        {results.map(hit =>
+          <li>
+            {hit.id} - {hit.name}
+          </li>
+        )}
+      </ul>
       </div>
     );
   }

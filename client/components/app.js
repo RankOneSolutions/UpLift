@@ -4,18 +4,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
+      hits: [],
     };
   }
 
   componentDidMount() {
     fetch("https://getlifted.herokuapp.com/db")
       .then(response => response.json())
-      .then(data => this.setState({ data }));
+      .then(data => this.setState({ hits: data.results }));
   }
 
   render() {
-    const {cute_animals} = this.state.data;
+    const {cute_animals} = this.state;
 
     return (
       <div>

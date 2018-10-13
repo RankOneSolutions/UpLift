@@ -16,7 +16,7 @@ router.get('/db', async (req, res) => {
 		          const client = await pool.connect()
 		          const result = await client.query('SELECT * FROM cute_animals');
 		          const results = { 'results': (result) ? result.rows : null};
-		          return results;
+		          res.send( results );
 		          client.release();
 		        } catch (err) {
 				      console.error(err);

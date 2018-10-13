@@ -7,6 +7,7 @@ import routes from './routes';
 // __dirname always references where bundle.js is located
 app.use(express.static(path.resolve(__dirname + '../../client')));
 app.use('/', routes);
+app.set('view engine', 'ejs')
 
 const PORT = process.env.PORT || 5000;
 

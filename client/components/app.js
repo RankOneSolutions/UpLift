@@ -5,14 +5,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      hits: [],
+      results: [],
     };
   }
 
   componentDidMount() {
     fetch("https://getlifted.herokuapp.com/db")
       .then(response => response.json())
-      .then(data => this.setState({ hits: data.results }));
+      .then(data => this.setState({ results: data }));
   }
 
   render() {

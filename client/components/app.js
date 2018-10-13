@@ -19,7 +19,7 @@ class App extends Component {
       <div>
        <h1>I'm in Redux and React Router! Tight.</h1>
        <h3>Check out some data:</h3>
-       console.log({this.state.data})
+       <script>console.log({this.state.data})</script>
       </div>
     );
   }

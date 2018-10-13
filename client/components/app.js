@@ -21,11 +21,14 @@ class App extends Component {
     return (
       <div>
        <h1>I'm in Redux and React Router! Tight.</h1>
-       <h3>Check out some data:</h3>
+       <h3>Check out some cute animals:</h3>
        <ul>
-        {results.map(hit =>
+        {results.foreach(row =>
           <li>
-            {hit.id} - {hit.name}
+            id: {row.id}
+            name: {row.name}
+            species: {row.species}
+            number of legs: {row.leg_count}
           </li>
         )}
       </ul>

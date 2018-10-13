@@ -15,11 +15,13 @@ class App extends Component {
   }
 
   render() {
+    const = {cute_animals} = this.state.data.results;
+
     return (
       <div>
        <h1>I'm in Redux and React Router! Tight.</h1>
        <h3>Check out some data:</h3>
-       <script>console.log({this.state.data})</script>
+       {console.log(cute_animals)}
       </div>
     );
   }

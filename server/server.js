@@ -9,6 +9,12 @@ import routes from './routes';
 app.use(express.static(path.resolve(__dirname + '../../client')));
 app.use('/', routes);
 
+// use the pg module to connect to heroku psql database
+const { Pool } = require('pg');
+const pool = new Pool({
+	  connectionString: process.env.DATABASE_URL,
+	  ssl: true
+});
 
 const PORT = process.env.PORT || 5000;
 

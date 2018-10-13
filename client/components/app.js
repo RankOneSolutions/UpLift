@@ -23,7 +23,7 @@ class App extends Component {
        <h1>I'm in Redux and React Router! Tight.</h1>
        <h3>Check out some cute animals:</h3>
        <ul>
-        {results.foreach(row =>
+        {results.map(row =>
           <li>
             id: {row.id}
             name: {row.name}

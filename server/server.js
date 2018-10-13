@@ -1,13 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require("path");
-const { Pool } = require('pg');
 import routes from './routes';
-
-const pool = new Pool({
-	          connectionString: process.env.DATABASE_URL,
-	          ssl: true
-});
 
 // for routing our index.html
 // __dirname always references where bundle.js is located

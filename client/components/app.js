@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   render() {
-    const = {cute_animals} = this.state.data.results;
+    const {cute_animals} = this.state.data.results;
 
     return (
       <div>

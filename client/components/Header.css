@@ -1,0 +1,50 @@
+ul {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+.navbar {
+  background-color: #3e474f;
+  padding: 10px 0;
+}
+
+.button-bar {
+  color: #5fcf80;
+  margin: 0 20%;
+}
+
+.nav-button {
+  color: #b2bbbd;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 0.2in;
+  transition: 0.3s;
+}
+
+.uplift {
+  color: #5fcf80;
+  font-size: 0.25in;
+  margin: 0 15px;
+}
+
+.profile-bar {
+  float: right;
+}
+
+.nav-button:hover {
+  color: white;
+}
+
+@media (orientation: portrait) {
+  .button-bar {
+    color: #5fcf80;
+    margin: 0;
+  }
+}

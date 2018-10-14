@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component {
@@ -19,8 +19,8 @@ class Header extends Component {
             </ul>
 
             <ul className='profile-bar'>
-              <li><Link to={'/'} className='nav-button'>Sign Up</Link></li>
-              <li><Link to={'/'} className='nav-button'>Login</Link></li>
+              <li><Link to={'/signup'} className='nav-button'>Sign Up</Link></li>
+              <li><Link to={'/login'} className='nav-button'>Login</Link></li>
             </ul>
           </div>
         </div>

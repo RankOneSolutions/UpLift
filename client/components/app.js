@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import { Route, Switch } from "react-router-dom";
 import Header  from './Header'
 import './app.css'
+import About from './About'
+import Home from './Home'
+import NotFound from './error/NotFound'
 
 class App extends Component {
   constructor(props) {
@@ -22,27 +26,13 @@ class App extends Component {
 
     return (
       <div>
-       <Header />
-       <div className='content'>
-        <h1>I'm in Redux and React Router! Tight.</h1>
-        <h3>Check out some cute animals:</h3>
-
-          {results.map(row =>
-            <ul>
-              <li>
-                id: {row.id}
-              </li>
-              <li>
-                name: {row.name}
-              </li>
-              <li>
-                species: {row.species}
-              </li>
-              <li>
-                number of legs: {row.leg_count}
-              </li>
-            </ul>
-          )}
+        <Header />
+        <div className='content'>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="*" component={NotFound} />
+          </Switch>
         </div>
       </div>
     );

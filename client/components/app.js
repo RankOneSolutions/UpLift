@@ -23,7 +23,6 @@ class App extends Component {
     return (
       <div>
        <Header />
-
        <div className='content'>
         <h1>I'm in Redux and React Router! Tight.</h1>
         <h3>Check out some cute animals:</h3>

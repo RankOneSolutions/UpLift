@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.content {
+  margin: 0 20%;
+}
+
+@media (orientation: portrait) {
+  .content {
+    margin: 0;
+  }
+}

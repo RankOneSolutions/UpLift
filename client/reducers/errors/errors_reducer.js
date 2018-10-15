@@ -1,4 +1,4 @@
-import sessionErrorReducer from "./session_error_reducer";
+import sessionErrorReducer from "./session_errors_reducer";
 import {combineReducers } from "redux";
 
 

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
-import Header  from './header/Header';
+import HeaderContainer  from './header/header_container';
 import './assets/app.css';
 import About from './About';
 import Home from './Home';
 import NotFound from './error/NotFound';
-import LoginFormContainer from './session/login_form_container';
-import SignpFormContainer from './session/signup_form_container';
+import SessionModal from "./modal/session_modal";
 
 
 // we should probably put in a css reset but I didn't want to mess with Jake's styling
@@ -33,13 +32,12 @@ class App extends Component {
 
     return (
       <div>
-        <Header />
+        <HeaderContainer />
+        <SessionModal />
         <div className='content'>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/login" component={LoginFormContainer} />
-            <Route path="/signup" component={SignpFormContainer} />
             <Route path="*" component={NotFound} />
           </Switch>
         </div>

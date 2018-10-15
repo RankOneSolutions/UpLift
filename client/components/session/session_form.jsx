@@ -10,10 +10,6 @@ class SessionForm extends Component {
   update(field) {
     return (event) => this.setState({ [field]: event.target.value });
   }
-
-  componentDidMount() {
-    this.props.openModal();
-  }
   
   handleSubmit(e) {
     e.preventDefault();
@@ -23,14 +19,10 @@ class SessionForm extends Component {
 
   }
 
-  closeModal(){
-    this.props.closeModal();
-  }
-
   render() {
     return (
-      <div className="modal-background" onClick={this.closeModal}>
-        <form onSubmit={this.handleSubmit} onClick={e => e.stopPropagation()} className="modal-child">
+      <div>
+        <form onSubmit={this.handleSubmit} >
           <h1>{this.props.formType}</h1>
           <label>username
             <input type="text"

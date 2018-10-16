@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import './Header.css';
+import '../assets/Header.css';
 
 class Header extends Component {
   constructor(props) {
@@ -19,8 +19,8 @@ class Header extends Component {
             </ul>
 
             <ul className='profile-bar'>
-              <li><Link to={'/signup'} className='nav-button'>Sign Up</Link></li>
-              <li><Link to={'/login'} className='nav-button'>Login</Link></li>
+              <li><p onClick={() => this.props.openModal('signup')} className='nav-button'>Sign Up</p></li>
+              <li><p onClick={() => this.props.openModal('login')} className='nav-button'>Login</p></li>
             </ul>
           </div>
         </div>

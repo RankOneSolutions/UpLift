@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "../assets/sessionform.css";
+
 
 class SessionForm extends Component {
   constructor(props) {
@@ -22,26 +24,19 @@ class SessionForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} >
+        <form className="session-form" onSubmit={this.handleSubmit} >
           <h1>{this.props.formType}</h1>
-          <label>username
-            <input type="text"
+            <input type="text" placeholder="Username"
               onChange={this.update("username")}
-              value={this.state.username}
-            />
-          </label>
-          <label>Email
-            <input type="email"
+              value={this.state.username} />
+            <input type="email" placeholder="Email"
               onChange={this.update('email')}
               value={this.state.password}
             />
-          </label>
-          <label>Password
-            <input type="password"
+            <input type="password" placeholder="Password"
               onChange={this.update('password')}
               value={this.state.password}
             />
-          </label>
           <button>{this.props.formType}</button>
         </form>
       </div>

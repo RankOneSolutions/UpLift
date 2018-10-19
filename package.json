@@ -9,7 +9,6 @@
   },
   "scripts": {
     "start": "nodemon ./server/server.js --exec babel-node ./server/server.js --presets es2015,stage-2",
-    "dev": "nodemon ./server/server.js",
     "webpack": "webpack --watch --mode=development",
     "heroku-prebuild":"npm install --save css-loader style-loader",
     "postinstall": "webpack --mode=production"

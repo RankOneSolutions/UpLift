@@ -514,6 +514,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./client/components/assets/sessionform.css":
+/*!**************************************************!*\
+  !*** ./client/components/assets/sessionform.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!./sessionform.css */ "./node_modules/css-loader/index.js!./client/components/assets/sessionform.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./client/components/error/NotFound.js":
 /*!*********************************************!*\
   !*** ./client/components/error/NotFound.js ***!
@@ -851,6 +881,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/sessionform.css */ "./client/components/assets/sessionform.css");
+/* harmony import */ var _assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -870,6 +902,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -912,20 +945,24 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "session-form",
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "username", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
+        placeholder: "Username",
         onChange: this.update("username"),
         value: this.state.username
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
+        placeholder: "Email",
         onChange: this.update('email'),
         value: this.state.password
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
+        placeholder: "Password",
         onChange: this.update('password'),
         value: this.state.password
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, this.props.formType)));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, this.props.formType)));
     }
   }]);
 
@@ -1322,7 +1359,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".modal-background {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.7);\n  z-index: 10;\n}\n\n.modal-child {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}", ""]);
+exports.push([module.i, ".modal-background {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  background: rgba(0, 0, 0, 0.7);\n  z-index: 10;\n}\n\n.modal-child {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  background:white;\n  border-radius: 3px;\n  transform: translate(-50%, -50%);\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./client/components/assets/sessionform.css":
+/*!****************************************************************************!*\
+  !*** ./node_modules/css-loader!./client/components/assets/sessionform.css ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".session-form {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  width: 400px;\n  height: 400px;\n  padding: 0px 20px 20px 20px;\n}\n\n.session-form > input {\n  height: 48px;\n  padding: 0 .75em;\n  border: 1px solid #dfe0e6;\n  color: #1c1c1f;\n  font-size: .9375em;\n  line-height: normal;\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 2px;\n}\n\n.session-form > h1 {\n  padding-top: 5px;\n  text-align: center;\n}\n\n.session-form > button {\n  background-color: #5fcf80;\n  padding: 1em;\n  color: white;\n  line-height: 1;\n  padding: 16px 48px 18px;\n  border-radius: 3px;\n  max-width: 320px;\n  margin-left: auto;\n  text-decoration: none;\n  margin-right: auto;\n  font-size: 14px;\n  letter-spacing: 0.04em;\n}\n\n.session-form > button:hover {\n  color: white;\n}", ""]);
 
 // exports
 

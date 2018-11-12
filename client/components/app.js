@@ -1,16 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
-import HeaderContainer  from './header/header_container';
-import './assets/app.css';
-import About from './About';
-import Home from './Home';
-import NotFound from './error/NotFound';
-import SessionModal from "./modal/session_modal";
-
-
-// we should probably put in a css reset but I didn't want to mess with Jake's styling
-// import './assets/reset.css';
-
 
 class App extends Component {
   constructor(props) {
@@ -32,15 +20,25 @@ class App extends Component {
 
     return (
       <div>
-        <HeaderContainer />
-        <SessionModal />
-        <div className='content'>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="*" component={NotFound} />
-          </Switch>
-        </div>
+       <h1>I'm in Redux and React Router! Tight.</h1>
+       <h3>Check out some cute animals:</h3>
+
+        {results.map(row =>
+          <ul>
+            <li>
+              id: {row.id}
+            </li>
+            <li>
+              name: {row.name}
+            </li>
+            <li>
+              species: {row.species}
+            </li>
+            <li>
+              number of legs: {row.leg_count} 
+            </li>
+          </ul>
+        )}
       </div>
     );
   }

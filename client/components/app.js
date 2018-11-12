@@ -26,7 +26,7 @@ class App extends Component {
         {results.map(row =>
           <ul>
             <li>
-              id: {row.id}
+              id: {row.id} 
             </li>
             <li>
               name: {row.name}
@@ -35,7 +35,7 @@ class App extends Component {
               species: {row.species}
             </li>
             <li>
-              number of legs: {row.leg_count} 
+              number of legs: {row.leg_count}
             </li>
           </ul>
         )}

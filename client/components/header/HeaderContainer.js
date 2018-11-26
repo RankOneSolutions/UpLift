@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { openModal } from '../../actions/modal_actions';
+import { openModal } from '../../actions/ModalActions';
 import Header from "./Header";
 const mapStateToProps = (state) => ({
 

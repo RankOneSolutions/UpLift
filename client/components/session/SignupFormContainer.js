@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import SessionForm from "./session_form";
-import { signup } from "../../actions/session_actions";
-import { openModal, closeModal } from "../../actions/modal_actions";
+import SessionForm from "./SessionForm";
+import { signup } from "../../actions/SessionActions";
+import { closeModal } from "../../actions/ModalActions";
 
 const mapStateToProps = (state) => {
   return {
@@ -13,7 +13,6 @@ const mapStateToProps = (state) => {
 // will create and sign up a user
 const mdp = (dispatch) => ({
   action: (user) => dispatch(signup(user)),
-  openModal: () => dispatch(openModal()),
   closeModal: () => dispatch(closeModal())
 });
 

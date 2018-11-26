@@ -51,20 +51,6 @@ class SessionForm extends Component {
       <div>
         <form className="session-form" onSubmit={this.handleSubmit} >
           <h1>{this.props.formType}</h1>
-<<<<<<< HEAD
-            <input type="text" placeholder="Username"
-              onChange={this.update("username")}
-              value={this.state.username} />
-            <input type="email" placeholder="Email"
-              onChange={this.update('email')}
-              value={this.state.password}
-            />
-            <input type="password" placeholder="Password"
-              onChange={this.update('password')}
-              value={this.state.password}
-            />
-          <button>{this.props.formType}</button>
-=======
           <div className="session-inputs">
             {this.handleLoginInputs()}
               <input type="password"
@@ -73,7 +59,6 @@ class SessionForm extends Component {
                 value={this.state.password}/>
             <button>{this.props.formType}</button>
           </div>
->>>>>>> Update Modal Syling
         </form>
       </div>
     );

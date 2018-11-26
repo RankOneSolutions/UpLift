@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Home extends Component {
-  // constructor(props) {
-  //   super(props);
+  constructor(props) {
+    super(props);
 
-  //   this.state = {
-  //     results: [],
-  //   };
-  // }
+    this.state = {
+      results: [],
+    };
+  }
 
-  // componentDidMount() {
-  //   fetch("https://getlifted.herokuapp.com/db")
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ results: data }));
-  // }
+  componentDidMount() {
+    fetch("https://getlifted.herokuapp.com/db")
+      .then(response => response.json())
+      .then(data => this.setState({ results: data }));
+  }
 
   // this is currently not being used
 

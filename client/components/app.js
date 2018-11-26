@@ -26,9 +26,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("https://getlifted.herokuapp.com/db")
-      .then(response => response.json())
-      .then(data => this.setState({ results: data }));
+    // fetch("https://getlifted.herokuapp.com/db")
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ results: data }));
   }
 
   render() {

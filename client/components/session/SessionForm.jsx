@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import "../assets/sessionModal.css";
+import { Button } from "../styledComponents/buttons";
+import { SessionContainer } from "../styledComponents/divs";
+import { SessionInput } from "../styledComponents/inputs";
 
 class SessionForm extends Component {
   constructor(props) {
@@ -9,7 +12,8 @@ class SessionForm extends Component {
   }
 
   update(field) {
-    return (event) => this.setState({ [field]: event.target.value });
+
+    return (event) =>  this.setState({ [field]: event.target.value });
   }
   
   handleSubmit(e) {
@@ -24,7 +28,7 @@ class SessionForm extends Component {
     // debugger;
     if (this.props.formType === "Sign In") {
       return (
-        <input type="text"
+        <SessionInput type="text"
           placeholder="Username or Email"
           onChange={this.update("username")}
           value={this.state.username} />
@@ -32,14 +36,14 @@ class SessionForm extends Component {
     } else {
       return (
       <>
-          <input type="text"
-              placeholder="Username"
+          <SessionInput type="text"
+            placeholder="Username"
             onChange={this.update("username")}
             value={this.state.username} />
-          <input type="email"
+          <SessionInput type="email"
             placeholder="Email"
           onChange={this.update('email')}
-          value={this.state.password} />
+          value={this.state.email} />
       </>
       );
     }
@@ -51,14 +55,14 @@ class SessionForm extends Component {
       <div>
         <form className="session-form" onSubmit={this.handleSubmit} >
           <h1>{this.props.formType}</h1>
-          <div className="session-inputs">
+          <SessionContainer>
             {this.handleLoginInputs()}
-              <input type="password"
+            <SessionInput type="password"
                 placeholder="Password"
                 onChange={this.update('password')}
                 value={this.state.password}/>
-            <button>{this.props.formType}</button>
-          </div>
+            <Button>{this.props.formType}</Button>
+          </SessionContainer>
         </form>
       </div>
     );

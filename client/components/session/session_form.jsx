@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import "../assets/sessionform.css";
-
+import "../assets/sessionModal.css";
 
 class SessionForm extends Component {
   constructor(props) {
@@ -21,11 +20,38 @@ class SessionForm extends Component {
 
   }
 
+  handleLoginInputs(){
+    // debugger;
+    if (this.props.formType === "Sign In") {
+      return (
+        <input type="text"
+          placeholder="Username or Email"
+          onChange={this.update("username")}
+          value={this.state.username} />
+      );
+    } else {
+      return (
+      <>
+          <input type="text"
+              placeholder="Username"
+            onChange={this.update("username")}
+            value={this.state.username} />
+          <input type="email"
+            placeholder="Email"
+          onChange={this.update('email')}
+          value={this.state.password} />
+      </>
+      );
+    }
+
+  }
+
   render() {
     return (
       <div>
         <form className="session-form" onSubmit={this.handleSubmit} >
           <h1>{this.props.formType}</h1>
+<<<<<<< HEAD
             <input type="text" placeholder="Username"
               onChange={this.update("username")}
               value={this.state.username} />
@@ -38,6 +64,16 @@ class SessionForm extends Component {
               value={this.state.password}
             />
           <button>{this.props.formType}</button>
+=======
+          <div className="session-inputs">
+            {this.handleLoginInputs()}
+              <input type="password"
+                placeholder="Password"
+                onChange={this.update('password')}
+                value={this.state.password}/>
+            <button>{this.props.formType}</button>
+          </div>
+>>>>>>> Update Modal Syling
         </form>
       </div>
     );

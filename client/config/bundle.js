@@ -413,7 +413,11 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "*",
         component: _error_NotFound__WEBPACK_IMPORTED_MODULE_6__["default"]
-      }))));
+      })), results.map(function (result) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          key: result.id
+        }, result);
+      })));
     }
   }]);
 
@@ -514,15 +518,26 @@ if(false) {}
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./client/components/assets/sessionform.css":
 /*!**************************************************!*\
   !*** ./client/components/assets/sessionform.css ***!
   \**************************************************/
+=======
+/***/ "./client/components/assets/sessionModal.css":
+/*!***************************************************!*\
+  !*** ./client/components/assets/sessionModal.css ***!
+  \***************************************************/
+>>>>>>> Update Modal Syling
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
+<<<<<<< HEAD
 var content = __webpack_require__(/*! !../../../node_modules/css-loader!./sessionform.css */ "./node_modules/css-loader/index.js!./client/components/assets/sessionform.css");
+=======
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!./sessionModal.css */ "./node_modules/css-loader/index.js!./client/components/assets/sessionModal.css");
+>>>>>>> Update Modal Syling
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -881,8 +896,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+<<<<<<< HEAD
 /* harmony import */ var _assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/sessionform.css */ "./client/components/assets/sessionform.css");
 /* harmony import */ var _assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_sessionform_css__WEBPACK_IMPORTED_MODULE_1__);
+=======
+/* harmony import */ var _assets_sessionModal_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/sessionModal.css */ "./client/components/assets/sessionModal.css");
+/* harmony import */ var _assets_sessionModal_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_sessionModal_css__WEBPACK_IMPORTED_MODULE_1__);
+>>>>>>> Update Modal Syling
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -942,11 +962,37 @@ function (_Component) {
       // this.props.action(this.state).then(() => this.props.closeModal();)
     }
   }, {
+    key: "handleLoginInputs",
+    value: function handleLoginInputs() {
+      // debugger;
+      if (this.props.formType === "Sign In") {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "text",
+          placeholder: "Username or Email",
+          onChange: this.update("username"),
+          value: this.state.username
+        });
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "text",
+          placeholder: "Username",
+          onChange: this.update("username"),
+          value: this.state.username
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "email",
+          placeholder: "Email",
+          onChange: this.update('email'),
+          value: this.state.password
+        }));
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "session-form",
         onSubmit: this.handleSubmit
+<<<<<<< HEAD
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         placeholder: "Username",
@@ -958,11 +1004,20 @@ function (_Component) {
         onChange: this.update('email'),
         value: this.state.password
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+=======
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "session-inputs"
+      }, this.handleLoginInputs(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+>>>>>>> Update Modal Syling
         type: "password",
         placeholder: "Password",
         onChange: this.update('password'),
         value: this.state.password
+<<<<<<< HEAD
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, this.props.formType)));
+=======
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, this.props.formType))));
+>>>>>>> Update Modal Syling
     }
   }]);
 
@@ -1379,6 +1434,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".session-form {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  width: 400px;\n  height: 400px;\n  padding: 0px 20px 20px 20px;\n}\n\n.session-form > input {\n  height: 48px;\n  padding: 0 .75em;\n  border: 1px solid #dfe0e6;\n  color: #1c1c1f;\n  font-size: .9375em;\n  line-height: normal;\n  width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 2px;\n}\n\n.session-form > h1 {\n  padding-top: 5px;\n  text-align: center;\n}\n\n.session-form > button {\n  background-color: #5fcf80;\n  padding: 1em;\n  color: white;\n  line-height: 1;\n  padding: 16px 48px 18px;\n  border-radius: 3px;\n  max-width: 320px;\n  margin-left: auto;\n  text-decoration: none;\n  margin-right: auto;\n  font-size: 14px;\n  letter-spacing: 0.04em;\n}\n\n.session-form > button:hover {\n  color: white;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./client/components/assets/sessionModal.css":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/css-loader!./client/components/assets/sessionModal.css ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".session-form{\n  height: 450px;\n  width: 400px;\n  display: grid;\n  grid-template-columns: repeat(4, 25%);\n  grid-template-rows: repeat(4, 25%);\n  /* justify-content: space-between; */\n  background-color: white;\n  border-radius: 5px;\n  box-shadow: -9px 9px 20px 0px rgba(61, 61, 97, 0.5);\n}\n\n.session-form > h1 {\n  text-align: center;\n  grid-column: 1 / span 4;\n}\n\n.session-inputs > input {\n  height: 48px;\n  padding: 0 .75em;\n  background-color: #FFF;\n  border: 1px solid #dfe0e6;\n  color: #1c1c1f;\n  font-size: .9375em;\n  line-height: normal;\n  /* width: 85%; */\n  margin: 0 1em 0 1em;\n  border-radius: 2px;\n}\n\n.session-inputs {\n  grid-column: 1 / span 4;\n  grid-row: 2/ span 4;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n}\n\n.session-inputs > button {\ncolor: white;\n    background-color: #5fcf80;\n    font-size: 14px;\n    line-height: 1;\n    border-radius: 200px;\n    padding: 16px 48px 18px;\n    transition-duration: .3s;\n    border-width: 0;\n    letter-spacing: 1px;\n    min-width: 100px;\n    width: 50%;\n    margin: 0 auto;\n    text-transform: uppercase;\n    white-space: normal;\n}", ""]);
 
 // exports
 

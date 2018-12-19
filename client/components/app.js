@@ -5,7 +5,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      results: [],
+      results: []
     };
   }
 
@@ -20,25 +20,16 @@ class App extends Component {
 
     return (
       <div>
-       <h1>I'm in Redux and React Router! Tight.</h1>
-       <h3>Check out some cute animals:</h3>
-
-        {results.map(row =>
-          <ul>
-            <li>
-              id: {row.id} 
-            </li>
-            <li>
-              name: {row.name}
-            </li>
-            <li>
-              species: {row.species}
-            </li>
-            <li>
-              number of legs: {row.leg_count}
-            </li>
-          </ul>
-        )}
+        <HeaderContainer />
+        <SessionModal />
+        <div className='content'>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+          { results.map((result) => <p key={result.id}>{result}</p>)}
+        </div>
       </div>
     );
   }

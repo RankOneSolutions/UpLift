@@ -1,4 +1,4 @@
-import modalReducer from "./modal_reducer";
+import modalReducer from "./ModalReducer";
 import { combineReducers } from "redux";
 
 

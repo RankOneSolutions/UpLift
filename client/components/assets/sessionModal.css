@@ -1,0 +1,53 @@
+.session-form{
+  height: 450px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 25%);
+  /* justify-content: space-between; */
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: -9px 9px 20px 0px rgba(61, 61, 97, 0.5);
+}
+
+.session-form > h1 {
+  text-align: center;
+  grid-column: 1 / span 4;
+}
+
+.session-inputs > input {
+  height: 48px;
+  padding: 0 .75em;
+  background-color: #FFF;
+  border: 1px solid #dfe0e6;
+  color: #1c1c1f;
+  font-size: .9375em;
+  line-height: normal;
+  margin: 0 1em 0 1em;
+  border-radius: 2px;
+}
+
+.session-inputs {
+  grid-column: 1 / span 4;
+  grid-row: 2/ span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.session-inputs > button {
+color: white;
+    background-color: #5fcf80;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 200px;
+    padding: 16px 48px 18px;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 1px;
+    min-width: 100px;
+    width: 50%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    white-space: normal;
+}

@@ -15,6 +15,8 @@ class Home extends Component {
       .then(data => this.setState({ results: data }));
   }
 
+  // this is currently not being used
+
   render() {
     const {results} = this.state;
 
